@@ -1,0 +1,55 @@
+.discount{
+    width: 100%;
+    padding-top: 112px;
+    margin-bottom: 32px;
+}
+.discount__body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 48px;
+    padding: 48px 0;
+    background: linear-gradient(136deg, #6C385E 0%, #AF478A 100%);
+}
+.discount__image{
+    width: 150px;
+}
+.discount__title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.discount__button{
+    padding: 16px 28px;
+    background: #fff;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.discount__button:hover {
+    background: #999;
+}
+.discount__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 60px;
+}
+
+@media (max-width: 500px) {
+    .discount {
+        padding-top: 50px;
+        margin-bottom: 0;
+    }
+    .discount__body {
+        padding: 25px 10px;
+        flex-direction: column;
+    }
+    .discount__content {
+        padding-right: 0;
+    }
+}

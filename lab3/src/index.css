@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Lora:regular,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lora";
+    font-size: 12;
+    background-color: #F8F9FA;
+    position: relative;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+
+@media (max-width: 900px){
+    .social-link img {
+        height: 30px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        position: relative;
+    }
+    .menu__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .apartment-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 49%;
+    }
+}
+
+@media (max-width: 580px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-left h3 {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .header > .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
