@@ -52,7 +52,7 @@
 
 .social-link {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 10px;
     transition: transform 0.3s ease;
     color: white;
