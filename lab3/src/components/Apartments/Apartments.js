@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import './Apartments.css'
+import { useNavigate } from "react-router-dom";
 
 const Apartments = ({ apartments, onBook }) => {
   const [visibleCount, setVisibleCount] = useState(6);
-  const [priceSort, setPriceSort] = useState(""); // 'asc' | 'desc'
-  const [roomFilter, setRoomFilter] = useState(""); // '1', '2', etc.
+  const [priceSort, setPriceSort] = useState(""); 
+  const [roomFilter, setRoomFilter] = useState("");
+  const navigate = useNavigate();
 
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + 6);
@@ -58,7 +60,7 @@ const Apartments = ({ apartments, onBook }) => {
           {visibleApartments.map((apt) => (
             <div className="apartmens__card card" key={apt.id}>
               <img className="card__img" src={apt.img} alt={`Квартира ${apt.id}`} />
-              <h3>{apt.title}</h3>
+              <h3 onClick={() => navigate(`/apartment/${apt.id}`)}>{apt.title}</h3>
               <p>Адреса: {apt.address}</p>
               <p>Кількість кімнат: {apt.rooms}</p>
               <p>Ціна за ніч: {apt.price} грн</p>

@@ -3,7 +3,7 @@ import logo from '../../assets/img/logo.jpg'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
-const Header = () => {
+const Header = ({ user, onLogout }) => {
   return (
     <header className="header">
       <div className="container">
@@ -15,7 +15,17 @@ const Header = () => {
             <li><a className="menu__link" href="#contacts">Контакти</a></li>
           </ul>
         </nav>
-        <div className="header__login">Увійти</div>
+        {user ? (
+          <div className='header__buttons'>
+            <span>👤 {user.email}</span>
+            <div className='header__login' onClick={onLogout}>Вийти</div>
+          </div>
+        ) : (
+          <div className='header__buttons'>
+            <Link className='header__login' to="/login">Увійти</Link>
+            <Link className='header__login' to="/register">Реєстрація</Link>
+          </div>
+        )}
       </div>
     </header>
   )

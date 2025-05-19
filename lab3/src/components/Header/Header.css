@@ -55,6 +55,9 @@
     background: #AF478A;
     border: none;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header__login:hover{
     background: #934476;
@@ -66,4 +69,11 @@
     font-weight: 700;
     color: #6C385E;
     margin-bottom: 40px;
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
 }
